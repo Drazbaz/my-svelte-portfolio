@@ -1,0 +1,28 @@
+[
+    {
+        "$id": "1",
+        "title": "Mid-Level Test Engineer",
+        "company": "Geek Ltd",
+        "city": "Sutton",
+        "dateFrom": "01/01/01",
+        "dateTo": "01/01/01",
+        "responsibilities": [
+            "res 1",
+            "res 2",
+            "res 3"
+        ]
+    },
+    {
+        "$id": "2",
+        "title": "Kitchen Porter",
+        "company": "Jackson + Rye Brassiere",
+        "city": "Richmond",
+        "dateFrom": "01/01/01",
+        "dateTo": "01/01/01",
+        "responsibilities": [
+            "res 1",
+            "res 2",
+            "res 3"
+        ]
+    }
+]

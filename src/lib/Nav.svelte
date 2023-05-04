@@ -13,6 +13,8 @@
     .row {
         display: flex;
         padding: 1rem;
+        border-bottom: solid 1px white;
+        margin-inline: 0.5rem;
     }
     .row > * {
         flex: 1;
