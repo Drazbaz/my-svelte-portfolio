@@ -1,10 +1,10 @@
 :root {
-  --p-font-color: #dfdfdf;
+  --p-font-color: #170227;
   --h-font-color: #9499ff;
-  --p-bg-color: #1e1e20;
+  --p-bg-color: #ffffff;
   --s-bg-color: #161618;
 
-  font-family: sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   font-weight: 400;
   line-height: 1.5;
   color: var(--p-font-color);
@@ -20,16 +20,25 @@
 }
 
 html {
-  background: var(--s-bg-color);
+  background: var(--p-bg-color);
 }
 
 body {
-  background: var(--p-bg-color);
-  margin-inline: 20vw;
+  border-inline: solid 2px var(--p-font-color);
+  padding-inline: 2vw;
+  margin-inline: 16vw;
   height: 100vh;
   display: block;
 }
 
+flex {
+  display: flex;
+}
+
 section {
-  padding: 1rem 5rem;
+  padding-block: 2rem;
+}
+
+.section-header {
+  font-size: 35px;
 }
