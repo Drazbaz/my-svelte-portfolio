@@ -1,46 +1,47 @@
 <script>
-  import Contact from "./lib/Contact.svelte";
-  import Experience from "./lib/Experience.svelte";
-    import Header from "./lib/Header.svelte";
-  import Nav from "./lib/Nav.svelte";
-  import Profile from "./lib/Profile.svelte";
+  import BannerNav from "./lib/BannerNav.svelte";
+  import Me from "./assets/IMG-20180809-WA0012.jpg";
 </script>
-<Header></Header>
-<bar></bar>
-<flex>
-  <aside>
-    <section>
-      <h2 class="section-header">Info</h2>
-      <p class="label"><i class='fas fa-house-user'></i> 24 Manor Road, Mebourne, Market Harbarough, LE16 8DU</p>
-      <p class="label"><i class='fas fa-at'></i> drazengordon@gmail.com</p>
-      <p class="label"><i class='fas fa-mobile'></i> +447758918596</p>
-    </section>
-    <section>
-      <h2 class="section-header">Skills</h2>
 
-    </section>
-  </aside>
-  <main>
-    <section>
-      <h2 class="section-header">Personal Profile</h2>
-     
-     </section>
-   <section>
-    <h2 class="section-header">Work Experience</h2>
-   
-   </section>
-   <section>
-    <h2 class="section-header">Education</h2>
-   </section>
-  </main>
-</flex>
-
+<div id="banner">
+  <BannerNav />
+</div>
+<div id="hero">
+  <div id="hero-contents">
+    <h1 id="hero-header">Hello there, <br /> I am Drazen</h1>
+  </div>
+  <img id="hero-image" src={Me} alt="Portrait" />
+</div>
+<main />
 
 <style>
-  aside {
-    flex:1.5;
+  #banner {
+    padding: 1rem;
+    color: var(--p-font-color);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: static;
   }
-  main {
-    flex: 2;
+
+  #hero {
+    padding: 1rem;
+    display: flex;
+  }
+
+  #hero-contents {
+    flex: 1;
+  }
+
+  #hero-header {
+    margin-top: 50%;
+    font-size: 70px;
+  }
+
+  #hero-image {
+    flex: 1;
+    height: 50%;
+    width: 50%;
+    right: 0;
   }
 </style>
