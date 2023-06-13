@@ -1,8 +1,9 @@
 <script>
+    import { onMount } from "svelte";
     import BannerNavLink from "./BannerNavLink.svelte";
 
     let labels = [
-        { label: "Home", isActive: false },
+        { label: "Home", isActive: true },
         { label: "About", isActive: false },
         { label: "Projects", isActive: false },
         { label: "Blog", isActive: false },
