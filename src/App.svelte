@@ -1,31 +1,22 @@
 <script>
-  import BannerNav from "./lib/BannerNav.svelte";
   import Me from "./assets/IMG-20180809-WA0012.jpg";
+  import Banner from "./lib/Banner.svelte";
 </script>
 
-<div id="banner">
-  <BannerNav />
-</div>
+<Banner />
 <div id="hero">
   <div id="hero-contents">
     <h1 id="hero-header">Hello there, <br /> I am Drazen</h1>
   </div>
   <img id="hero-image" src={Me} alt="Portrait" />
 </div>
-<main />
+<div id="footer">
+  <h1>Innovative . Passionate . Lalalalala . Blahblah blah</h1>
+</div>
 
 <style>
-  #banner {
-    padding: 1rem;
-    color: var(--p-font-color);
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    position: static;
-  }
-
   #hero {
-    padding: 1rem;
+    padding: 2rem;
     display: flex;
   }
 
@@ -43,5 +34,16 @@
     height: 50%;
     width: 50%;
     right: 0;
+  }
+
+  #footer {
+    border-top: 1px solid var(--color-4);
+  }
+
+  @media only screen and (max-width: 1000px) {
+    #hero {
+      display: block;
+      padding: 0;
+    }
   }
 </style>

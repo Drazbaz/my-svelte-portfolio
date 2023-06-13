@@ -1,8 +1,8 @@
 :root {
-  --p-font-color: #d72020;
-  --s-font-color: #ec8c32;
-  --p-bg-color: #f5f4f3;
-  --s-bg-color: #65e6ed;
+  --color-1: #d72020;
+  --color-2: #ec8c32;
+  --color-3: #f5f4f3;
+  --color-4: #232323;
   font-family: 'Ubuntu', sans-serif;
   font-weight: 400;
   line-height: 1.5;
@@ -20,8 +20,14 @@
 }
 
 body {
-  background-color: var(--p-bg-color);
+  background-color: var(--color-3);
   margin-inline: 20vw;
   height: 100vh;
   display: block;
+}
+
+@media only screen and (max-width: 1000px) {
+  body {
+    margin-inline: 0px;
+  }
 }

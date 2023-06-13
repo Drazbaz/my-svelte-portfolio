@@ -53,15 +53,15 @@
     a {
         font-size: 22px;
         text-decoration: none;
-        color: var(--p-font-color);
+        color: var(--color-4);
     }
 
     .active {
-        color: #000000;
+        color: var(--color-4);
     }
 
     .hovered {
-        color: var(--s-font-color);
+        color: var(--color-2);
     }
 
     .sprite {
@@ -72,5 +72,26 @@
     }
     .visible {
         visibility: visible;
+    }
+
+    @media only screen and (max-width: 1000px) {
+        .banner-nav-link {
+            padding: 0;
+        }
+        .sprite {
+            display: none;
+        }
+
+        a {
+            color: var(--color-3);
+        }
+
+        .active {
+            color: var(--color-4);
+        }
+
+        .hovered {
+            color: var(--color-3);
+        }
     }
 </style>
