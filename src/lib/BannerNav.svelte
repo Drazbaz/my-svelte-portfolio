@@ -1,4 +1,5 @@
 <script>
+    import { Hamburger } from "svelte-hamburgers";
     import BannerNavLink from "./BannerNavLink.svelte";
 
     let labels = [
@@ -18,6 +19,8 @@
             }
         });
     }
+
+    export let open = false;
 </script>
 
 <nav id="home-nav" class="banner-nav">
@@ -27,13 +30,12 @@
         active={labels[0].isActive}
         on:message={handleNavClick}
     />
-    <div id="burger-menu">
-        <div id="bar-1" class="bar" />
-        <div id="bar-2" class="bar" />
-        <div id="bar-3" class="bar" />
+    <div id="hamburger-container">
+        <Hamburger id="hamburger-menu" bind:open />
     </div>
 </nav>
-<nav id="main-nav" class="banner-nav">
+
+<nav id="main-nav" class="banner-nav" class:open>
     <BannerNavLink
         route="#about"
         label={labels[1].label}
@@ -58,28 +60,14 @@
     .banner-nav {
         padding: 1rem;
     }
-    #burger-menu {
+
+    #hamburger-container {
         display: none;
     }
+
     @media only screen and (max-width: 1000px) {
         .banner-nav {
             padding: 0.5rem;
-        }
-
-        #burger-menu {
-            display: block;
-        }
-
-        #burger-menu {
-            width: 33px;
-            height: 33px;
-            display: list-item;
-        }
-
-        .bar {
-            height: 3px;
-            background: var(--color-4);
-            margin: 2px;
         }
 
         #home-nav {
@@ -87,10 +75,23 @@
             justify-content: space-between;
             display: flex;
         }
+
+        #hamburger-container {
+            height: 33px;
+            width: 33px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
         #main-nav {
             justify-content: space-evenly;
-            display: flex;
+            display: none;
             background: var(--color-2);
+        }
+
+        .open {
+            display: flex !important;
         }
     }
 </style>
