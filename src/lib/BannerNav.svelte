@@ -31,7 +31,7 @@
         on:message={handleNavClick}
     />
     <div id="hamburger-container">
-        <Hamburger id="hamburger-menu" bind:open />
+        <Hamburger id="hamburger-menu" bind:open --color="#232323" />
     </div>
 </nav>
 
@@ -59,6 +59,7 @@
 <style>
     .banner-nav {
         padding: 1rem;
+        display: flex;
     }
 
     #hamburger-container {
@@ -71,14 +72,14 @@
         }
 
         #home-nav {
-            background: var(--color-1);
+            background: var(--color-3);
             justify-content: space-between;
             display: flex;
         }
 
         #hamburger-container {
-            height: 33px;
-            width: 33px;
+            height: 40px;
+            width: 40px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -87,11 +88,12 @@
         #main-nav {
             justify-content: space-evenly;
             display: none;
-            background: var(--color-2);
+            background: var(--color-5);
+            padding-left: 2rem;
         }
 
         .open {
-            display: flex !important;
+            display: block !important;
         }
     }
 </style>

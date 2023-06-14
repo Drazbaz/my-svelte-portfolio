@@ -42,12 +42,14 @@
         on:mouseleave={mouseLeaveEvent}>{label}</a
     >
     <img class="sprite" class:visible src={sprite} alt="havelock-gif" />
+    <br />
 </div>
 
 <style>
     .banner-nav-link {
         display: inline;
         padding: 1rem;
+        margin-inline: 0.2rem;
     }
 
     a {
@@ -77,21 +79,6 @@
     @media only screen and (max-width: 1000px) {
         .banner-nav-link {
             padding: 0;
-        }
-        .sprite {
-            display: none;
-        }
-
-        a {
-            color: var(--color-3);
-        }
-
-        .active {
-            color: var(--color-4);
-        }
-
-        .hovered {
-            color: var(--color-3);
         }
     }
 </style>
