@@ -22,6 +22,8 @@
             position: sticky;
             top: 0;
             padding: 0;
+            border: none;
+            box-shadow: 0px 0px 6px var(--color-4);
         }
     }
 </style>

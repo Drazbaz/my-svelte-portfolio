@@ -87,13 +87,23 @@
         }
 
         #main-nav {
-            justify-content: space-evenly;
             display: none;
-            background: var(--color-5);
             padding-left: 2rem;
+            padding-bottom: 2rem;
+            transition: display 400ms ease-in-out;
+        }
+
+        @keyframes my-animation {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
         }
 
         .open {
+            animation: my-animation 400ms ease-in-out;
             display: block !important;
         }
     }
