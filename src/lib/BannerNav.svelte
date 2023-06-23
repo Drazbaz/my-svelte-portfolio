@@ -3,10 +3,10 @@
     import BannerNavLink from "./BannerNavLink.svelte";
 
     let labels = [
-        { label: "Home", isActive: true },
-        { label: "About", isActive: false },
-        { label: "Projects", isActive: false },
-        { label: "Blog", isActive: false },
+        { label: "Home", isActive: true, isDisabled: false },
+        { label: "About", isActive: false, isDisabled: true },
+        { label: "Projects", isActive: false, isDisabled: false },
+        { label: "Blog", isActive: false, isDisabled: true },
     ];
 
     export let open = false;
@@ -29,6 +29,7 @@
         route="/"
         label={labels[0].label}
         active={labels[0].isActive}
+        disable={labels[0].isDisabled}
         on:message={handleNavClick}
     />
     <div id="hamburger-container">
@@ -41,18 +42,21 @@
         route="#about"
         label={labels[1].label}
         active={labels[1].isActive}
+        disable={labels[1].isDisabled}
         on:message={handleNavClick}
     />
     <BannerNavLink
         route="#projects"
         label={labels[2].label}
         active={labels[2].isActive}
+        disable={labels[2].isDisabled}
         on:message={handleNavClick}
     />
     <BannerNavLink
         route="#blog"
         label={labels[3].label}
         active={labels[3].isActive}
+        disable={labels[3].isDisabled}
         on:message={handleNavClick}
     />
 </nav>
