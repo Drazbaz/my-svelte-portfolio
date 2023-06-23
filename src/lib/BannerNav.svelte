@@ -9,7 +9,10 @@
         { label: "Blog", isActive: false },
     ];
 
+    export let open = false;
+
     function handleNavClick(event) {
+        open = false;
         const clickedLabel = event.detail.clickedLink;
         labels = labels.map((item) => {
             if (item.label === clickedLabel) {
@@ -19,8 +22,6 @@
             }
         });
     }
-
-    export let open = false;
 </script>
 
 <nav id="home-nav" class="banner-nav">

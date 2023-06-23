@@ -16,10 +16,25 @@
     }
 
     const dispatch = createEventDispatcher();
-    function clickEvent() {
+
+    const BURGERMENUANIMATIONTIME = 200;
+
+    function clickEvent(event) {
         dispatch("message", {
             clickedLink: label,
         });
+
+        let isBurgerMenuVisible = document.querySelector(
+            "button.hamburger.is-active"
+        )
+            ? true
+            : false;
+        if (isBurgerMenuVisible) {
+            event.preventDefault();
+            setTimeout(() => {
+                window.location.href = event.target.href;
+            }, BURGERMENUANIMATIONTIME);
+        }
     }
 
     function mouseEnterEvent() {
