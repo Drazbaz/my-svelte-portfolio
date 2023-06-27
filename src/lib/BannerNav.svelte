@@ -18,7 +18,11 @@
             if (item.label === clickedLabel) {
                 return { ...item, isActive: true };
             } else {
-                return { ...item, isActive: false };
+                if (item.label == "Home") {
+                    return { ...item, label: "Back To Home", isActive: false };
+                } else {
+                    return { ...item, isActive: false };
+                }
             }
         });
     }
